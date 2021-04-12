@@ -4,6 +4,11 @@
 	"version": "0.0.1",
   "keywords": ["cssinjs", "px2rem", "pxtorem", "px-rem", "cssinjs-px2rem", "cssinjs-pxtorem"],
 	"description": "cssinjs中px自动转化rem的好帮手,(请确保您的vscode版本不低于1.54.0)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vscode-plugs/cssinjs-px2rem"
+  },
+  "homepage": "https://github.com/vscode-plugs/cssinjs-px2rem/blob/master/README.md",
   "publisher": "dongdongjie",
   "author": {
     "name": "dongdongjie",
