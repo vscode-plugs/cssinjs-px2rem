@@ -1,4 +1,4 @@
-import { Range, TextDocument, Position, CompletionItemKind, CompletionItem, CompletionItemProvider } from 'vscode';
+import { Range, TextDocument, Position, CompletionItemKind, CompletionItem, CompletionItemProvider, ProviderResult } from 'vscode';
 
 
 export class PxtoRemProvider implements CompletionItemProvider {
@@ -13,7 +13,7 @@ export class PxtoRemProvider implements CompletionItemProvider {
     provideCompletionItems(
       document: TextDocument,
       position: Position,
-    ): Thenable<CompletionItem[]>{
+    ): ProviderResult<CompletionItem[]>{
       return new Promise(resolve => {
         const res = this.getPrefix(document, position);
         if (res) {

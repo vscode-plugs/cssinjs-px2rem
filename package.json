@@ -16,6 +16,7 @@
     "url": "http://blog.coderdong.cn/blog/"
   },
   "license": "MIT",
+  "icon": "cssinjs-icon.png",
 	"engines": {
 		"vscode": "^1.54.0"
 	},
