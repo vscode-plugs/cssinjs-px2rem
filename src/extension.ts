@@ -1,12 +1,17 @@
 import * as vscode from 'vscode';
 import { PxtoRemProvider } from './provider';
+import { getConfig } from './config';
 
 export function activate(context: vscode.ExtensionContext) {
   const LANS: Array<string> = ['javascript', 'javascriptreact', 'typescriptreact'];
-  const options = vscode.workspace.getConfiguration('cssinjsPx2rem');
+  getConfig();
   LANS.forEach(lan => {
-    const pxtoRemProvider = new PxtoRemProvider(options);
+    const pxtoRemProvider = new PxtoRemProvider();
     context.subscriptions.push(vscode.languages.registerCompletionItemProvider(lan, pxtoRemProvider));
+  });
+
+  vscode.workspace.onDidChangeConfiguration(() => {
+    getConfig();
   });
 }
 

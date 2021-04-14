@@ -1,7 +1,7 @@
 {
   "name": "cssinjs-px2rem",
 	"displayName": "cssinjs-px2rem",
-	"version": "0.0.1",
+	"version": "0.0.2",
   "keywords": ["cssinjs", "px2rem", "pxtorem", "px-rem", "cssinjs-px2rem", "cssinjs-pxtorem"],
 	"description": "cssinjs中px自动转化rem的好帮手,(请确保您的vscode版本不低于1.54.0)",
   "repository": {

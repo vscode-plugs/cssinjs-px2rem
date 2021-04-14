@@ -1,14 +1,12 @@
 import { Range, TextDocument, Position, CompletionItemKind, CompletionItem, CompletionItemProvider, ProviderResult } from 'vscode';
-
+import { CONFIG } from './config';
 
 export class PxtoRemProvider implements CompletionItemProvider {
     private prefixExp: RegExp = /^[+-]?([0-9]*[.])?[0-9]+(p|px|$)$/;
     private regexExp: RegExp = /[+-]?[\w\d.]+$/;
     private numExp: RegExp = /[+-]?\d*[.]?\d*/;
 
-    constructor(private options: any) {
-      this.options = options;
-    }
+    constructor() {}
 
     provideCompletionItems(
       document: TextDocument,
@@ -31,7 +29,7 @@ export class PxtoRemProvider implements CompletionItemProvider {
   
       const match = line.match(this.regexExp);
       if (match && this.prefixExp.test(match[0])) {
-        const options = this.options;
+        const options = CONFIG;
         const designSize = options.designSize;
         const keepFloat = options.keepFloat;
         const splitNumber = options.splitNumber;
